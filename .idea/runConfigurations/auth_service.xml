@@ -1,0 +1,45 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="auth-service" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="imageTag" value="auth-service:latest" />
+        <option name="containerName" value="auth-service" />
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_DATASOURCE_PASSWORD" />
+              <option name="value" value="Bounty@123" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_DATASOURCE_URL" />
+              <option name="value" value="jdbc:postgresql://auth-service-db:5432/db" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_DATASOURCE_USERNAME" />
+              <option name="value" value="admin_user" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_JPA_HIBERNATE_DDL_AUTO" />
+              <option name="value" value="update" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_KAFKA_BOOTSTRAP_SERVERS" />
+              <option name="value" value="kafka:9092" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="SPRING_SQL_INIT_MODE" />
+              <option name="value" value="always" />
+            </DockerEnvVarImpl>
+            <DockerEnvVarImpl>
+              <option name="name" value="JWT_SECRET" />
+              <option name="value" value="f279caf014f7b018240282d5f565b3eaaa42e4500e56629326f21a55ebfe27111f63d0190626965e287cbffa51f494a98a5d7e93d6b8047022cd9bdedfe8e4502f4a827ff41add2f719b038b8e58c12e86c019f81c7cd229dcad54c32859287bd8a5cac9da4595d5a63153f4f6038346555f33306aa189194a8aec9411e33e85182fcded1f19051852478cce374092f08d00db4c9664eed62008fdeced39b603ccb73c1817bf2d894d479e1f86ce85910d8a726e2dfa4b79b3c12492e57d027baa3f843b81350e4409312f362cb28f79f6061913d7b08eaa0076c1b04cb0990e0bac5687b9b8bba62de130329f2af2a6340a2aa0b17f0530c781672884bde38c" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
+        <option name="commandLineOptions" value="--network internal" />
+        <option name="sourceFilePath" value="auth-service/Dockerfile" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
